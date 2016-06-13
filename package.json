@@ -1,0 +1,45 @@
+{
+  "name": "react-native-experimental-navigation",
+  "version": "0.26.0",
+  "description": "React Native ExperimentalNavigation clone",
+  "main": "NavigationExperimental",
+  "scripts": {
+    "build": "babel src -d lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aksonov/react-native-experimental-navigation.git"
+  },
+  "keywords": [
+    "react-native",
+    "ExperimentalNavigation",
+    "navigation"
+  ],
+  "author": "Pavlo Aksonov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aksonov/react-native-experimental-navigation/issues"
+  },
+  "homepage": "https://github.com/aksonov/react-native-experimental-navigation#readme",
+  "dependencies": {
+    "babel-cli": "^6.8.0",
+    "clamp": "^1.0.1",
+    "fbjs": "^0.8.1",
+    "react": "^15.0.2",
+    "react-addons-pure-render-mixin": "^15.1.0"
+  },
+  "babel": {
+    "plugins": [
+      "syntax-flow",
+      "transform-flow-strip-types"
+    ],
+    "presets": [
+      "react-native"
+    ]
+  },
+  "devDependencies": {
+    "babel-plugin-syntax-flow": "^6.8.0",
+    "babel-plugin-transform-flow-strip-types": "^6.8.0",
+    "babel-preset-react-native": "^1.7.0"
+  }
+}
