@@ -1,6 +1,6 @@
 {
   "name": "react-native-experimental-navigation",
-  "version": "0.26.5",
+  "version": "0.26.6",
   "description": "React Native ExperimentalNavigation clone",
   "main": "NavigationExperimental",
   "scripts": {
