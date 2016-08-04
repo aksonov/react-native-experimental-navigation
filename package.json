@@ -21,7 +21,7 @@
     "url": "https://github.com/aksonov/react-native-experimental-navigation/issues"
   },
   "homepage": "https://github.com/aksonov/react-native-experimental-navigation#readme",
-  "devDendencies": {
+  "devDependencies": {
     "babel-cli": "^6.8.0",
     "clamp": "^1.0.1",
     "fbjs": "^0.8.1",
