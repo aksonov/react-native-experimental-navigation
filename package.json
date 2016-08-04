@@ -1,6 +1,6 @@
 {
   "name": "react-native-experimental-navigation",
-  "version": "0.26.3",
+  "version": "0.26.4",
   "description": "React Native ExperimentalNavigation clone",
   "main": "NavigationExperimental",
   "scripts": {
@@ -21,7 +21,7 @@
     "url": "https://github.com/aksonov/react-native-experimental-navigation/issues"
   },
   "homepage": "https://github.com/aksonov/react-native-experimental-navigation#readme",
-  "dependencies": {
+  "devDendencies": {
     "babel-cli": "^6.8.0",
     "clamp": "^1.0.1",
     "fbjs": "^0.8.1",
