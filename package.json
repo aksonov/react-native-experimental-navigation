@@ -1,6 +1,6 @@
 {
   "name": "react-native-experimental-navigation",
-  "version": "0.26.6",
+  "version": "0.26.7",
   "description": "React Native ExperimentalNavigation clone",
   "main": "NavigationExperimental",
   "scripts": {
@@ -25,7 +25,7 @@
     "babel-cli": "^6.8.0",
     "clamp": "^1.0.1",
     "fbjs": "^0.8.1",
-    "react-addons-pure-render-mixin": "^15.1.0",
+    "react-addons-pure-render-mixin": "^15.0.2",
     "babel-plugin-syntax-flow": "^6.8.0",
     "babel-plugin-transform-flow-strip-types": "^6.8.0",
     "babel-preset-react-native": "^1.7.0"
@@ -40,6 +40,9 @@
     ]
   },
   "dependencies": {
-    "clamp": "^1.0.1"
+    "clamp": "^1.0.1",
+    "react-addons-pure-render-mixin": "^15.0.2",
+    "babel-plugin-syntax-flow": "^6.8.0",
+    "babel-plugin-transform-flow-strip-types": "^6.8.0"
   }
 }
