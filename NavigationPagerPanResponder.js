@@ -21,12 +21,11 @@ const clamp = require('clamp');
 import type {
   NavigationPanPanHandlers,
   NavigationSceneRendererProps,
-} from 'NavigationTypeDefinition';
+} from './NavigationTypeDefinition';
 
 import type {
   NavigationGestureDirection,
-} from 'NavigationCardStackPanResponder';
-
+} from './NavigationCardStackPanResponder';
 
 
 /**
@@ -44,8 +43,8 @@ const {
  * Primitive gesture actions.
  */
 const Actions = {
-  JUMP_BACK: {type: 'jump_back'},
-  JUMP_FORWARD: {type: 'jump_forward'},
+  JUMP_BACK: { type: 'jump_back' },
+  JUMP_FORWARD: { type: 'jump_forward' },
 };
 
 /**

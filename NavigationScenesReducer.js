@@ -16,7 +16,7 @@ const invariant = require('fbjs/lib/invariant');
 import type {
   NavigationParentState,
   NavigationScene,
-} from 'NavigationTypeDefinition';
+} from './NavigationTypeDefinition';
 
 const SCENE_KEY_PREFIX = 'scene_';
 
@@ -24,7 +24,7 @@ const SCENE_KEY_PREFIX = 'scene_';
  * Helper function to compare route keys (e.g. "9", "11").
  */
 function compareKey(one: string, two: string): number {
-  var delta = one.length - two.length;
+  const delta = one.length - two.length;
   if (delta > 0) {
     return 1;
   }
@@ -79,7 +79,7 @@ function NavigationScenesReducer(
 
   // Populate stale scenes from previous scenes marked as stale.
   scenes.forEach(scene => {
-    const {key} = scene;
+    const { key } = scene;
     if (scene.isStale) {
       staleScenes.set(key, scene);
     }
@@ -129,7 +129,7 @@ function NavigationScenesReducer(
   const nextScenes = [];
 
   const mergeScene = (nextScene => {
-    const {key} = nextScene;
+    const { key } = nextScene;
     const prevScene = prevScenes.has(key) ? prevScenes.get(key) : null;
     if (prevScene && areScenesShallowEqual(prevScene, nextScene)) {
       // Reuse `prevScene` as `scene` so view can avoid unnecessary re-render.

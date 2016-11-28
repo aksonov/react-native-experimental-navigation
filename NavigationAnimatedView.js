@@ -27,7 +27,7 @@ import type {
   NavigationParentState,
   NavigationScene,
   NavigationSceneRenderer,
-} from 'NavigationTypeDefinition';
+} from './NavigationTypeDefinition';
 
 type Props = {
   applyAnimation: NavigationAnimationSetter,
@@ -44,7 +44,7 @@ type State = {
   scenes: Array<NavigationScene>,
 };
 
-const {PropTypes} = React;
+const { PropTypes } = React;
 
 function applyDefaultAnimation(
   position: NavigationAnimatedValue,

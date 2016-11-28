@@ -16,7 +16,7 @@ const invariant = require('fbjs/lib/invariant');
 import type {
   NavigationState,
   NavigationParentState,
-} from 'NavigationTypeDefinition';
+} from './NavigationTypeDefinition';
 
 function getParent(state: NavigationState): ?NavigationParentState {
   if (
@@ -53,7 +53,7 @@ function indexOf(state: NavigationState, key: string): ?number {
 }
 
 function push(state: NavigationParentState, newChildState: NavigationState): NavigationParentState {
-  var lastChildren: Array<NavigationState> = state.children;
+  const lastChildren: Array<NavigationState> = state.children;
   return {
     ...state,
     children: [

@@ -37,7 +37,6 @@ const NavigationAnimatedValueSubscription = require('./NavigationAnimatedValueSu
 const NavigationAnimatedView = require('./NavigationAnimatedView');
 const NavigationCard = require('./NavigationCard');
 const NavigationCardStackStyleInterpolator = require('./NavigationCardStackStyleInterpolator');
-const NavigationContext = require('./NavigationContext');
 const NavigationLegacyNavigatorRouteStack = require('./NavigationLegacyNavigatorRouteStack');
 const NavigationCardStackPanResponder = require('./NavigationCardStackPanResponder');
 const NavigationPagerPanResponder = require('./NavigationPagerPanResponder');
@@ -45,17 +44,18 @@ const NavigationPagerStyleInterpolator = require('./NavigationPagerStyleInterpol
 const NavigatorBreadcrumbNavigationBar = require('./NavigatorBreadcrumbNavigationBar');
 const NavigatorNavigationBar = require('./NavigatorNavigationBar');
 const NavigatorSceneConfigs = require('./NavigatorSceneConfigs');
+const NavigationContext = require('./NavigationContext');
 const React = require('react');
 const ReactComponentWithPureRenderMixin = require('react-addons-pure-render-mixin');
 
-import type  {
+import type {
   NavigationActionCaller,
   NavigationAnimatedValue,
   NavigationAnimationSetter,
   NavigationParentState,
   NavigationSceneRenderer,
   NavigationSceneRendererProps,
-} from 'NavigationTypeDefinition';
+} from './NavigationTypeDefinition';
 
 type Props = {
   configureScene: any,
@@ -262,7 +262,7 @@ class NavigationLegacyNavigator extends React.Component<any, Props, State> {
       this._onPositionChange,
     );
 
-    const {navigationBar, navigationBarNavigator} = this.props;
+    const { navigationBar, navigationBarNavigator } = this.props;
     if (!navigationBar) {
       return null;
     }
@@ -279,12 +279,12 @@ class NavigationLegacyNavigator extends React.Component<any, Props, State> {
   }
 
   _renderCard(props: NavigationSceneRendererProps): ReactElement {
-    const {scene} = props;
-    const {configureScene} = this.props;
+    const { scene } = props;
+    const { configureScene } = this.props;
 
     // Default getters for style and pan responders.
     let styleGetter = NavigationCardStackStyleInterpolator.forHorizontal;
-    let panResponderGetter =  NavigationCardStackPanResponder.forHorizontal;
+    let panResponderGetter = NavigationCardStackPanResponder.forHorizontal;
 
     if (configureScene) {
       const route = RouteStack.getRouteByNavigationState(scene.navigationState);
@@ -326,7 +326,7 @@ class NavigationLegacyNavigator extends React.Component<any, Props, State> {
   }
 
   _renderScene(props: NavigationSceneRendererProps): ReactElement {
-    const {navigationState} = props.scene;
+    const { navigationState } = props.scene;
     const route = RouteStack.getRouteByNavigationState(navigationState);
     return this.props.renderScene(route, this);
   }
@@ -351,7 +351,7 @@ class NavigationLegacyNavigator extends React.Component<any, Props, State> {
 
   _onNavigationBarRef(navigationBarRef: any): void {
     this._navigationBarRef = navigationBarRef;
-    const {navigationBar} = this.props;
+    const { navigationBar } = this.props;
     if (navigationBar && typeof navigationBar.ref === 'function') {
       navigationBar.ref(navigationBarRef);
     }

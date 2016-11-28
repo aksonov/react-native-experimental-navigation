@@ -32,9 +32,9 @@
  */
 'use strict';
 
-import type  {
+import type {
   NavigationSceneRendererProps,
-} from 'NavigationTypeDefinition';
+} from './NavigationTypeDefinition';
 
 /**
  * Utility that builds the style for the card in the cards list.
@@ -95,7 +95,7 @@ function forHorizontal(props: NavigationSceneRendererProps): Object {
   });
 
   return {
-    opacity : 1,
+    opacity: 1,
     shadowColor: 'transparent',
     shadowRadius: 0,
     transform: [

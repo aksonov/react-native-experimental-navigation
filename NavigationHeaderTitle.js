@@ -45,8 +45,8 @@ type Props = {
 }
 
 const NavigationHeaderTitle = ({ children, style, textStyle, viewProps }: Props) => (
-  <View style={[ styles.title, style ]} {...viewProps}>
-    <Text style={[ styles.titleText, textStyle ]}>{children}</Text>
+  <View style={[styles.title, style]} {...viewProps}>
+    <Text style={[styles.titleText, textStyle]}>{children}</Text>
   </View>
 );
 
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    marginHorizontal: 16
+    marginHorizontal: 16,
   },
 
   titleText: {
@@ -63,14 +63,14 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '500',
     color: 'rgba(0, 0, 0, .9)',
-    textAlign: Platform.OS === 'ios' ? 'center' : 'left'
-  }
+    textAlign: Platform.OS === 'ios' ? 'center' : 'left',
+  },
 });
 
 NavigationHeaderTitle.propTypes = {
   children: React.PropTypes.string.isRequired,
   style: View.propTypes.style,
-  textStyle: Text.propTypes.style
+  textStyle: Text.propTypes.style,
 };
 
 module.exports = NavigationHeaderTitle;

@@ -15,9 +15,9 @@ const PanResponder = require('react-native').PanResponder;
 
 const invariant = require('fbjs/lib/invariant');
 
-import type  {
+import type {
   NavigationPanPanHandlers,
-} from 'NavigationTypeDefinition';
+} from './NavigationTypeDefinition';
 
 const EmptyPanHandlers = {
   onMoveShouldSetPanResponder: null,

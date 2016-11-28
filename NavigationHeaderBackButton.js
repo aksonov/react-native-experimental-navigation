@@ -39,7 +39,7 @@ const NavigationHeaderBackButton = (props: Props) => (
 );
 
 NavigationHeaderBackButton.propTypes = {
-  onNavigate: React.PropTypes.func.isRequired
+  onNavigate: React.PropTypes.func.isRequired,
 };
 
 const styles = StyleSheet.create({
@@ -53,8 +53,8 @@ const styles = StyleSheet.create({
     height: 24,
     width: 24,
     margin: Platform.OS === 'ios' ? 10 : 16,
-    resizeMode: 'contain'
-  }
+    resizeMode: 'contain',
+  },
 });
 
 module.exports = NavigationContainer.create(NavigationHeaderBackButton);

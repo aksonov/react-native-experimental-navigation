@@ -11,9 +11,9 @@
  */
 'use strict';
 
-var NavigationFindReducer = require('./NavigationFindReducer');
-var NavigationStackReducer = require('./NavigationStackReducer');
-var NavigationTabsReducer = require('./NavigationTabsReducer');
+const NavigationFindReducer = require('./NavigationFindReducer');
+const NavigationStackReducer = require('./NavigationStackReducer');
+const NavigationTabsReducer = require('./NavigationTabsReducer');
 
 const NavigationReducer = {
   FindReducer: NavigationFindReducer,
