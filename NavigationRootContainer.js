@@ -79,13 +79,13 @@ class NavigationRootContainer extends React.Component<any, Props, State> {
   props: Props;
   state: State;
 
-  static propTypes = {
+  static propTypes = process.env.NODE_ENV !== 'production' ? {
     initialAction: NavigationPropTypes.action.isRequired,
     linkingActionMap: PropTypes.func,
     persistenceKey: PropTypes.string,
     reducer: PropTypes.func.isRequired,
     renderNavigation: PropTypes.func.isRequired,
-  };
+  } : {};
 
   static defaultProps = {
     initialAction: { type: 'RootContainerInitialAction' },

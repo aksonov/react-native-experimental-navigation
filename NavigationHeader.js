@@ -94,14 +94,14 @@ class NavigationHeader extends React.Component<DefaultProps, Props, any> {
     },
   };
 
-  static propTypes = {
+  static propTypes = process.env.NODE_ENV !== 'production' ? {
     ...NavigationPropTypes.SceneRendererProps,
     renderLeftComponent: PropTypes.func,
     renderRightComponent: PropTypes.func,
     renderTitleComponent: PropTypes.func,
     style: View.propTypes.style,
     viewProps: PropTypes.shape(View.propTypes),
-  };
+  } : {};
 
   shouldComponentUpdate(nextProps: Props, nextState: any): boolean {
     return ReactComponentWithPureRenderMixin.shouldComponentUpdate.call(

@@ -38,9 +38,9 @@ const NavigationHeaderBackButton = (props: Props) => (
   </TouchableOpacity>
 );
 
-NavigationHeaderBackButton.propTypes = {
+NavigationHeaderBackButton.propTypes = process.env.NODE_ENV !== 'production' ? {
   onNavigate: React.PropTypes.func.isRequired
-};
+} : {};
 
 const styles = StyleSheet.create({
   buttonContainer: {

@@ -54,11 +54,11 @@ class NavigationView extends React.Component<any, Props, any> {
   props: Props;
   state: State;
 
-  static propTypes = {
+  static propTypes = process.env.NODE_ENV !== 'production' ? {
     navigationState: PropTypes.object.isRequired,
     onNavigate: PropTypes.func.isRequired,
     renderScene: PropTypes.func.isRequired,
-  };
+  } : {};
 
   constructor(props: Props, context: any) {
     super(props, context);

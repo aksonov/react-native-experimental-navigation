@@ -68,10 +68,10 @@ const {PropTypes} = React;
 
 class SceneView extends React.Component<any, SceneViewProps, any> {
 
-  static propTypes = {
+  static propTypes = process.env.NODE_ENV !== 'production' ? {
     sceneRenderer: PropTypes.func.isRequired,
     sceneRendererProps: NavigationPropTypes.SceneRenderer,
-  };
+  } : {};
 
   shouldComponentUpdate(nextProps: SceneViewProps, nextState: any): boolean {
     return (
@@ -91,14 +91,14 @@ class SceneView extends React.Component<any, SceneViewProps, any> {
 class NavigationCard extends React.Component<any, Props, any> {
   props: Props;
 
-  static propTypes = {
+  static propTypes = process.env.NODE_ENV !== 'production' ? {
     ...NavigationPropTypes.SceneRendererProps,
     onComponentRef: PropTypes.func.isRequired,
     panHandlers: NavigationPropTypes.panHandlers,
     pointerEvents: PropTypes.string.isRequired,
     renderScene: PropTypes.func.isRequired,
     style: PropTypes.any,
-  };
+} : {};
 
   shouldComponentUpdate(nextProps: Props, nextState: any): boolean {
     return ReactComponentWithPureRenderMixin.shouldComponentUpdate.call(

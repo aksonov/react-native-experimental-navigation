@@ -67,10 +67,10 @@ const styles = StyleSheet.create({
   }
 });
 
-NavigationHeaderTitle.propTypes = {
+NavigationHeaderTitle.propTypes = process.env.NODE_ENV !== 'production' ? {
   children: React.PropTypes.string.isRequired,
   style: View.propTypes.style,
   textStyle: Text.propTypes.style
-};
+} : {};
 
 module.exports = NavigationHeaderTitle;

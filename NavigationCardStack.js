@@ -86,12 +86,12 @@ type DefaultProps = {
 class NavigationCardStack extends React.Component<DefaultProps, Props, void> {
   _renderScene : NavigationSceneRenderer;
 
-  static propTypes = {
+  static propTypes = process.env.NODE_ENV !== 'production' ? {
     direction: PropTypes.oneOf([Directions.HORIZONTAL, Directions.VERTICAL]),
     navigationState: NavigationPropTypes.navigationParentState.isRequired,
     renderOverlay: PropTypes.func,
     renderScene: PropTypes.func.isRequired,
-  };
+  } : {};
 
   static defaultProps: DefaultProps = {
     direction: Directions.HORIZONTAL,

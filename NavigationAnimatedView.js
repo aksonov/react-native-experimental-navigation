@@ -69,13 +69,13 @@ class NavigationAnimatedView
   props: Props;
   state: State;
 
-  static propTypes = {
+  static propTypes = process.env.NODE_ENV !== 'production' ? {
     applyAnimation: PropTypes.func,
     navigationState: NavigationPropTypes.navigationState.isRequired,
     onNavigate: PropTypes.func.isRequired,
     renderOverlay: PropTypes.func,
     renderScene: PropTypes.func.isRequired,
-  };
+  } : {};
 
   static defaultProps = {
     applyAnimation: applyDefaultAnimation,
