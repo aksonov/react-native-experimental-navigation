@@ -395,7 +395,6 @@ class NavigationLegacyNavigator extends React.Component<any, Props, State> {
       {
         duration: 500,
         toValue: index,
-        useNativeDriver: true,
       }
     ).start();
   }
