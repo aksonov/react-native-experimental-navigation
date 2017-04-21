@@ -16,7 +16,7 @@
     "navigation"
   ],
   "author": "Pavlo Aksonov",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/aksonov/react-native-experimental-navigation/issues"
   },
