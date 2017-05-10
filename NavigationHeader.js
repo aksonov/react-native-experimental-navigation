@@ -39,7 +39,6 @@ const NavigationHeaderTitle = require('./NavigationHeaderTitle');
 const NavigationHeaderBackButton = require('./NavigationHeaderBackButton');
 const NavigationPropTypes = require('./NavigationPropTypes');
 const NavigationHeaderStyleInterpolator = require('./NavigationHeaderStyleInterpolator');
-const ReactComponentWithPureRenderMixin = require('react-addons-pure-render-mixin');
 
 const {
   Animated,
@@ -74,7 +73,7 @@ const APPBAR_HEIGHT = Platform.OS === 'ios' ? 44 : 56;
 const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 20 : 0;
 const {PropTypes} = React;
 
-class NavigationHeader extends React.Component<DefaultProps, Props, any> {
+class NavigationHeader extends React.PureComponent<DefaultProps, Props, any> {
   props: Props;
 
   static defaultProps = {
@@ -102,14 +101,6 @@ class NavigationHeader extends React.Component<DefaultProps, Props, any> {
     style: View.propTypes.style,
     viewProps: PropTypes.shape(View.propTypes),
   };
-
-  shouldComponentUpdate(nextProps: Props, nextState: any): boolean {
-    return ReactComponentWithPureRenderMixin.shouldComponentUpdate.call(
-      this,
-      nextProps,
-      nextState
-    );
-  }
 
   render(): ReactElement {
     const { scenes, style, viewProps } = this.props;

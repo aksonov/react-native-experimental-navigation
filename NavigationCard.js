@@ -41,7 +41,6 @@ const NavigationPagerStyleInterpolator = require('./NavigationPagerStyleInterpol
 const NavigationPointerEventsContainer = require('./NavigationPointerEventsContainer');
 const NavigationPropTypes = require('./NavigationPropTypes');
 const React = require('react');
-const ReactComponentWithPureRenderMixin = require('react-addons-pure-render-mixin');
 const StyleSheet = require('react-native').StyleSheet;
 const View = require('react-native').View;
 
@@ -66,7 +65,7 @@ type Props = NavigationSceneRendererProps & {
 
 const {PropTypes} = React;
 
-class SceneView extends React.Component<any, SceneViewProps, any> {
+class SceneView extends React.PureComponent<any, SceneViewProps, any> {
 
   static propTypes = {
     sceneRenderer: PropTypes.func.isRequired,
@@ -99,14 +98,6 @@ class NavigationCard extends React.Component<any, Props, any> {
     renderScene: PropTypes.func.isRequired,
     style: PropTypes.any,
   };
-
-  shouldComponentUpdate(nextProps: Props, nextState: any): boolean {
-    return ReactComponentWithPureRenderMixin.shouldComponentUpdate.call(
-      this,
-      nextProps,
-      nextState
-    );
-  }
 
   render(): ReactElement {
     const {
