@@ -26,7 +26,7 @@ import type {
   NavigationScene,
   NavigationSceneRenderer,
   NavigationSceneRendererProps,
-} from 'NavigationTypeDefinition';
+} from './NavigationTypeDefinition';
 
 type Props = {
   navigationState: NavigationParentState,
@@ -40,7 +40,7 @@ type State = {
   scenes: Array<NavigationScene>,
 };
 
-const {PropTypes} = React;
+const { PropTypes } = React;
 
 /**
  * A simple view that will render a scene for the currently focused sub-state.
@@ -70,7 +70,7 @@ class NavigationView extends React.PureComponent<any, Props, any> {
       height: new Animated.Value(0),
     };
 
-    const {navigationState} = this.props;
+    const { navigationState } = this.props;
 
     this._position = new Animated.Value(navigationState.index);
 
@@ -82,7 +82,7 @@ class NavigationView extends React.PureComponent<any, Props, any> {
 
   componentWillReceiveProps(nextProps: Props): void {
     if (nextProps.navigationState !== this.props.navigationState) {
-      const {navigationState} = nextProps;
+      const { navigationState } = nextProps;
       this.setState(
         {
           scenes: NavigationScenesReducer(
@@ -105,7 +105,7 @@ class NavigationView extends React.PureComponent<any, Props, any> {
   render(): ReactElement {
     const {
       navigationState,
-      onNavigate
+      onNavigate,
     } = this.props;
 
     const {
@@ -141,7 +141,7 @@ class NavigationView extends React.PureComponent<any, Props, any> {
   }
 
   _onLayout(event: any): void {
-    const {height, width} = event.nativeEvent.layout;
+    const { height, width } = event.nativeEvent.layout;
 
     const layout = {
       ...this.state.layout,

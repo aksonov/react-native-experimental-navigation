@@ -47,11 +47,11 @@ const {
   View,
 } = ReactNative;
 
-import type  {
+import type {
   NavigationSceneRenderer,
   NavigationSceneRendererProps,
   NavigationStyleInterpolator,
-} from 'NavigationTypeDefinition';
+} from './NavigationTypeDefinition';
 
 type DefaultProps = {
   renderLeftComponent: NavigationSceneRenderer,

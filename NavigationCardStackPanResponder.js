@@ -20,7 +20,7 @@ const clamp = require('clamp');
 import type {
   NavigationPanPanHandlers,
   NavigationSceneRendererProps,
-} from 'NavigationTypeDefinition';
+} from './NavigationTypeDefinition';
 
 /**
  * The duration of the card animation in milliseconds.
@@ -69,7 +69,7 @@ const Actions = {
   // The gesture to navigate backward.
   // This is done by swiping from the left to the right or from the top to the
   // bottom.
-  BACK: {type: 'back'},
+  BACK: { type: 'back' },
 };
 
 /**

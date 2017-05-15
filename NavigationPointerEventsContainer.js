@@ -37,9 +37,9 @@ const NavigationAnimatedValueSubscription = require('./NavigationAnimatedValueSu
 
 const invariant = require('fbjs/lib/invariant');
 
-import type  {
+import type {
   NavigationSceneRendererProps,
-} from 'NavigationTypeDefinition';
+} from './NavigationTypeDefinition';
 
 type Props = NavigationSceneRendererProps;
 
@@ -150,7 +150,7 @@ function create(
       return 'auto';
     }
   }
-  return  Container;
+  return Container;
 }
 
 module.exports = {

@@ -23,7 +23,7 @@ import type {
   NavigationParentState,
   NavigationReducer,
   NavigationRenderer,
-} from 'NavigationTypeDefinition';
+} from './NavigationTypeDefinition';
 
 export type BackAction = {
   type: 'BackAction',
@@ -71,7 +71,7 @@ function getBackAction(): BackAction {
   return { type: 'BackAction' };
 }
 
-const {PropTypes} = React;
+const { PropTypes } = React;
 
 class NavigationRootContainer extends React.Component<any, Props, State> {
   _handleOpenURLEvent: Function;

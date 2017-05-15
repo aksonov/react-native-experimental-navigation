@@ -33,9 +33,9 @@
 'use strict';
 
 
-import type  {
+import type {
   NavigationSceneRendererProps,
-} from 'NavigationTypeDefinition';
+} from './NavigationTypeDefinition';
 
 /**
  * Utility that builds the style for the navigation header.
@@ -49,42 +49,42 @@ import type  {
  */
 
 function forLeft(props: NavigationSceneRendererProps): Object {
-  const {position, scene} = props;
-  const {index} = scene;
+  const { position, scene } = props;
+  const { index } = scene;
   return {
     opacity: position.interpolate({
-      inputRange: [ index - 1, index, index + 1 ],
-      outputRange: [ 0, 1, 0 ],
+      inputRange: [index - 1, index, index + 1],
+      outputRange: [0, 1, 0],
     }),
   };
 }
 
 function forCenter(props: NavigationSceneRendererProps): Object {
-  const {position, scene} = props;
-  const {index} = scene;
+  const { position, scene } = props;
+  const { index } = scene;
   return {
-    opacity:position.interpolate({
-      inputRange: [ index - 1, index, index + 1 ],
-      outputRange: [ 0, 1, 0 ],
+    opacity: position.interpolate({
+      inputRange: [index - 1, index, index + 1],
+      outputRange: [0, 1, 0],
     }),
     transform: [
       {
         translateX: position.interpolate({
-          inputRange: [ index - 1, index + 1 ],
-          outputRange: [ 200, -200 ],
+          inputRange: [index - 1, index + 1],
+          outputRange: [200, -200],
         }),
-      }
+      },
     ],
   };
 }
 
 function forRight(props: NavigationSceneRendererProps): Object {
-  const {position, scene} = props;
-  const {index} = scene;
+  const { position, scene } = props;
+  const { index } = scene;
   return {
     opacity: position.interpolate({
-      inputRange: [ index - 1, index, index + 1 ],
-      outputRange: [ 0, 1, 0 ],
+      inputRange: [index - 1, index, index + 1],
+      outputRange: [0, 1, 0],
     }),
   };
 }

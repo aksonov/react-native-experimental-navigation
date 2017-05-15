@@ -19,8 +19,8 @@
 
 import type {
   NavigationState,
-  NavigationReducer
-} from 'NavigationTypeDefinition';
+  NavigationReducer,
+} from './NavigationTypeDefinition';
 
 function NavigationFindReducer(
   reducers: Array<NavigationReducer>,

@@ -43,18 +43,18 @@ const StyleSheet = require('react-native').StyleSheet;
 
 const emptyFunction = require('fbjs/lib/emptyFunction');
 
-const {PropTypes} = React;
-const {Directions} = NavigationCardStackPanResponder;
+const { PropTypes } = React;
+const { Directions } = NavigationCardStackPanResponder;
 
 import type {
   NavigationParentState,
   NavigationSceneRenderer,
   NavigationSceneRendererProps,
-} from 'NavigationTypeDefinition';
+} from './NavigationTypeDefinition';
 
 import type {
   NavigationGestureDirection,
-} from 'NavigationCardStackPanResponder';
+} from './NavigationCardStackPanResponder';
 
 type Props = {
   direction: NavigationGestureDirection,
@@ -131,7 +131,7 @@ class NavigationCardStack extends React.PureComponent<DefaultProps, Props, void>
     return (
       <NavigationCard
         {...props}
-        key={'card_' + props.scene.key}
+        key={`card_ ${props.scene.key}`}
         panHandlers={panHandlers}
         renderScene={this.props.renderScene}
         style={style}
