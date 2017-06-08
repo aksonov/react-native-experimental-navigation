@@ -65,7 +65,7 @@ type Props = NavigationSceneRendererProps & {
 
 const {PropTypes} = React;
 
-class SceneView extends React.PureComponent<any, SceneViewProps, any> {
+class SceneView extends React.Component<any, SceneViewProps, any> {
 
   static propTypes = {
     sceneRenderer: PropTypes.func.isRequired,
