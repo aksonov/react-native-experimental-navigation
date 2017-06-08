@@ -43,6 +43,7 @@
     "babel-plugin-transform-flow-strip-types": "^6.8.0",
     "babel-preset-react-native": "^1.9.0",
     "clamp": "^1.0.1",
-    "fbjs": "^0.8.1"
+    "fbjs": "^0.8.1",
+    "prop-types": "^15.5.10"
   }
 }

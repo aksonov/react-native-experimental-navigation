@@ -40,7 +40,7 @@ type State = {
   scenes: Array<NavigationScene>,
 };
 
-const {PropTypes} = React;
+const PropTypes = require('prop-types');
 
 /**
  * A simple view that will render a scene for the currently focused sub-state.
