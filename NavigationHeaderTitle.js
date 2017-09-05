@@ -28,6 +28,7 @@
 'use strict';
 
 const React = require('react');
+const PropTypes = require('prop-types');
 const ReactNative = require('react-native');
 
 const {
@@ -69,7 +70,7 @@ const styles = StyleSheet.create({
 });
 
 NavigationHeaderTitle.propTypes = {
-  children: React.PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
   style: ViewPropTypes.style,
   textStyle: Text.propTypes.style
 };
