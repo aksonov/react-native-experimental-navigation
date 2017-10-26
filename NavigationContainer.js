@@ -14,7 +14,6 @@
 var React = require('react');
 const PropTypes = require('prop-types');
 var NavigationRootContainer = require('./NavigationRootContainer');
-const PropTypes = require('prop-types');
 
 function createNavigationContainer(
   Component: ReactClass<any>,
