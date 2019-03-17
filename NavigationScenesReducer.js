@@ -110,7 +110,7 @@ function NavigationScenesReducer(
     freshScenes.set(key, scene);
   });
 
-  if (prevState) {
+  if (prevState && nextState.key === prevState.key) {
     // Look at the previous children and classify any removed scenes as `stale`.
     prevState.children.forEach((navigationState, index) => {
       const key = SCENE_KEY_PREFIX + navigationState.key;
