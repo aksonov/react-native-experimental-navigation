@@ -53,6 +53,7 @@ function applyDefaultAnimation(
   Animated.spring(
     position,
     {
+      useNativeDriver: false,
       bounciness: 0,
       toValue: navigationState.index,
     }
